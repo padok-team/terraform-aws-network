@@ -19,7 +19,7 @@ module "example" {
 
 ## Examples
 
-- [Example of use case](examples/example_of_use_case/main.tf)
+- [VPC on 1 AZ with 3 subnets](examples/vpc_1_az_3_subnets/main.tf)
 - [Example of other use case](examples/example_of_other_use_case/main.tf)
 
 <!-- BEGIN_TF_DOCS -->
