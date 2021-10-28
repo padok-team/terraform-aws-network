@@ -1,6 +1,6 @@
-# CLOUD_PROVIDER TYPE Terraform module
+# AWS Network Terraform module
 
-Terraform module which creates **TYPE** resources on **CLOUD_PROVIDER**. This module is an abstraction of the [MODULE_NAME](https://github.com/a_great_module) by [@someoneverysmart](https://github.com/someoneverysmart).
+Terraform module which creates **Network** resources on **AWS**. This module is an abstraction of the [AWS VPC Terraform](https://github.com/terraform-aws-modules/terraform-aws-vpc).
 
 ## User Stories for this module
 

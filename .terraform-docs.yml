@@ -27,4 +27,4 @@ settings:
   indent: 2
   required: true
   sensitive: true
-  type: true
+  network: true
