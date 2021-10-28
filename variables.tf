@@ -1,3 +1,4 @@
+# Global VPC variables
 variable "vpc_name" {
   type        = string
   description = "Name of your VPC"
@@ -19,7 +20,7 @@ variable "map_public_ip_on_launch" {
   default     = false
 }
 
-# Tags 
+# Global tags
 variable "tags" {
   type        = map(string)
   description = "Tags for all your ressources"
@@ -31,8 +32,7 @@ variable "vpc_tags" {
   default     = {}
 }
 
-
-# Public subnets Information
+# Public subnets information
 variable "public_subnet_cidr" {
   type        = list(string)
   description = "List of public CIDR to deploy in your VPC"
@@ -44,13 +44,11 @@ variable "public_subnet_suffix" {
   default     = "public"
 }
 
-
 variable "public_dedicated_network_acl" {
   description = "Whether to use dedicated network ACL (not default) and custom rules for public subnets"
   type        = bool
   default     = false
 }
-
 
 variable "public_inbound_acl_rules" {
   description = "Public subnets inbound network ACLs"
@@ -78,7 +76,7 @@ variable "public_acl_tags" {
   default     = {}
 }
 
-# Private Subnets Information
+# Private subnets information
 variable "private_subnet_cidr" {
   type        = list(string)
   description = "List of Private CIDR to deploy in your VPC"
@@ -87,27 +85,13 @@ variable "private_subnet_cidr" {
 variable "private_subnet_suffix" {
   type        = string
   description = "Suffix for your public subnets"
-  default     = "public"
+  default     = "private"
 }
-
-variable "private_subnet_tags" {
-  type        = map(string)
-  description = "Additional Tags for your private subnets"
-  default     = {}
-}
-
-
 
 variable "private_dedicated_network_acl" {
   description = "Whether to use dedicated network ACL (not default) and custom rules for private subnets"
   type        = bool
   default     = false
-}
-
-variable "private_acl_tags" {
-  type        = map(string)
-  description = "Additional Tags for your private acl"
-  default     = {}
 }
 
 variable "private_inbound_acl_rules" {
@@ -122,7 +106,19 @@ variable "private_outbound_acl_rules" {
   default     = []
 }
 
-# Intra subnets Information
+variable "private_subnet_tags" {
+  type        = map(string)
+  description = "Additional Tags for your private subnets"
+  default     = {}
+}
+
+variable "private_acl_tags" {
+  type        = map(string)
+  description = "Additional Tags for your private acl"
+  default     = {}
+}
+
+# Intra subnets information
 variable "intra_subnet_cidr" {
   type        = list(string)
   description = "List of intra CIDR to deploy in your VPC"
@@ -131,20 +127,7 @@ variable "intra_subnet_cidr" {
 variable "intra_subnet_suffix" {
   type        = string
   description = "Suffix for your public subnets"
-  default     = "public"
-}
-
-variable "intra_subnet_tags" {
-  type        = map(string)
-  description = "Additional Tags for your intra subnets"
-  default     = {}
-}
-
-
-variable "intra_acl_tags" {
-  type        = map(string)
-  description = "Additional Tags for your intra acl"
-  default     = {}
+  default     = "intra"
 }
 
 variable "intra_dedicated_network_acl" {
@@ -163,4 +146,16 @@ variable "intra_outbound_acl_rules" {
   description = "Intra subnets inbound network ACLs"
   type        = list(map(string))
   default     = []
+}
+
+variable "intra_subnet_tags" {
+  type        = map(string)
+  description = "Additional Tags for your intra subnets"
+  default     = {}
+}
+
+variable "intra_acl_tags" {
+  type        = map(string)
+  description = "Additional Tags for your intra acl"
+  default     = {}
 }
