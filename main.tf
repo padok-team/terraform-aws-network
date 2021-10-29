@@ -20,10 +20,11 @@ module "vpc" {
   intra_subnet_suffix   = var.intra_subnet_suffix
 
   ## Gateway
-  enable_nat_gateway = var.enable_nat_gateway
-  single_nat_gateway = var.single_nat_gateway
-  enable_vpn_gateway = false
-  create_igw         = var.create_igw
+  enable_nat_gateway   = var.enable_nat_gateway
+  single_nat_gateway   = var.single_nat_gateway
+  create_igw           = var.create_igw
+  enable_vpn_gateway   = false
+  enable_dns_hostnames = true
 
   ## Disable AWS default resources
   manage_default_route_table    = false
