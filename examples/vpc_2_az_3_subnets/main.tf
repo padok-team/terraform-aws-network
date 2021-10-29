@@ -15,6 +15,8 @@ module "vpc_multiple_az" {
   private_subnet_cidr = ["10.0.64.0/18", "10.0.128.0/18"]
   intra_subnet_cidr   = ["10.0.192.0/19", "10.0.224.0/19"]
 
+  single_nat_gateway = false
+
   intra_dedicated_network_acl = true
 
   intra_inbound_acl_rules = [
