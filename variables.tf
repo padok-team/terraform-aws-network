@@ -54,6 +54,7 @@ variable "vpc_tags" {
 variable "public_subnet_cidr" {
   type        = list(string)
   description = "List of public CIDR to deploy in your VPC"
+  default     = []
 }
 
 variable "public_subnet_suffix" {
@@ -98,6 +99,7 @@ variable "public_acl_tags" {
 variable "private_subnet_cidr" {
   type        = list(string)
   description = "List of Private CIDR to deploy in your VPC"
+  default     = []
 }
 
 variable "private_subnet_suffix" {
@@ -140,6 +142,7 @@ variable "private_acl_tags" {
 variable "intra_subnet_cidr" {
   type        = list(string)
   description = "List of intra CIDR to deploy in your VPC"
+  default     = []
 }
 
 variable "intra_subnet_suffix" {
