@@ -50,11 +50,28 @@ module "vpc" {
   intra_outbound_acl_rules = var.intra_outbound_acl_rules
 
   ## Tagging
-  tags                = var.tags
-  vpc_tags            = var.vpc_tags
-  public_subnet_tags  = var.public_subnet_tags
-  private_subnet_tags = var.private_subnet_tags
-  intra_subnet_tags   = var.intra_subnet_tags
+  tags     = var.tags
+  vpc_tags = var.vpc_tags
+  public_subnet_tags = merge(
+    {
+      "Public" = "True"
+    },
+    var.public_subnet_tags,
+  )
+
+  private_subnet_tags = merge(
+    {
+      "Private" = "True"
+    },
+    var.private_subnet_tags,
+  )
+
+  intra_subnet_tags = merge(
+    {
+      "Intra" = "True"
+    },
+    var.intra_subnet_tags,
+  )
 
   private_acl_tags = var.private_acl_tags
   public_acl_tags  = var.public_acl_tags

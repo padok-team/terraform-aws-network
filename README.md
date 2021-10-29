@@ -1,14 +1,17 @@
 # AWS Network Terraform module
 
-Terraform module which creates **VPC** resources on **AWS**. This module is an abstraction of the [AWS VPC Terraform](https://github.com/terraform-aws-modules/terraform-aws-vpc).
+Terraform module which creates **VPC** resources on **AWS**. This module is an abstraction of the
+[AWS VPC Terraform](https://github.com/terraform-aws-modules/terraform-aws-vpc).
 
 ## User Stories for this module
 
 - AAOps I can I can deploy an HA VPC on multiple AZ easily
 - AAOps I can deploy public, private & intra subnets in my VPC
+- AAOps My route tables and NACLs are preconfigured
 - AAOps I can retrieve subnets & vpc ids as outputs of the module
 
 ## Schema
+
 ![Schema](img/schema.png)
 
 ## Usage

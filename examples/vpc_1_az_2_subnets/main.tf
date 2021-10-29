@@ -1,4 +1,8 @@
-# Create a simple VPC on 1 Availability zone with 2 subnets 
+# Create a simple VPC on 1 Availability zone with 2 subnets
+locals {
+  region = "eu-west-3"
+  env    = "dev"
+}
 
 provider "aws" {
   region = local.region
@@ -12,7 +16,7 @@ provider "aws" {
 }
 
 module "simple_vpc" {
-  source = "../.."
+  source = "git@github.com:padok-team/terraform-aws-network.git"
 
   vpc_name = "Simple_VPC"
   tags = {
