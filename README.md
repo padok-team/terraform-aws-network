@@ -42,7 +42,7 @@ module "simple_vpc" {
 
 ## Examples
 
-- [Example of VPC on 1 AZ with 2 subnets](examples/vpc_1_az_2_subnets/main.tf)
+- [Example of VPC on 2 AZ with 2 private subnets and 1 NAT](examples/vpc_2_az_2_subnets_1_nat/main.tf)
 - [Example of VPC on 2 az, 3 subnets by az and simple NACLs](examples/vpc_2_az_3_subnets/main.tf)
 
 <!-- BEGIN_TF_DOCS -->

@@ -23,17 +23,17 @@ module "simple_vpc" {
     "Scope"      = "Global Tag",
     "Terraform"  = "True",
     "ModuleName" = "simple_vpc",
-    "Example"    = "vpc_1_az_2_subnets"
+    "Example"    = "vpc_2_az_2_subnets_1_nat"
   }
 
   public_subnet_tags = {
     "Scope" = "Public Subnet Tag"
   }
 
-  vpc_availability_zone = ["eu-west-3a"]
+  vpc_availability_zone = ["eu-west-3a", "eu-west-3b"]
 
   vpc_cidr            = "172.16.0.0/24"
-  private_subnet_cidr = ["172.16.0.0/25"]
-  public_subnet_cidr  = ["172.16.0.128/25"]
+  public_subnet_cidr  = ["172.16.0.0/25"]
+  private_subnet_cidr = ["172.16.0.128/26", "172.16.0.192/26"]
   intra_subnet_cidr   = []
 }
