@@ -16,7 +16,7 @@ provider "aws" {
 }
 
 module "simple_vpc" {
-  source = "git@github.com:padok-team/terraform-aws-network.git"
+  source = "../.."
 
   vpc_name = "Simple_VPC"
   tags = {

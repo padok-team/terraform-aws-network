@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 module "vpc_multiple_az" {
-  source = "git@github.com:padok-team/terraform-aws-network.git"
+  source = "../.."
 
   vpc_name              = "vpc_multi_az_example"
   vpc_availability_zone = ["eu-west-3a", "eu-west-3b"]

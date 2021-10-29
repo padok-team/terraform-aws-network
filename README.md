@@ -18,7 +18,7 @@ Terraform module which creates **VPC** resources on **AWS**. This module is an a
 
 ```hcl
 module "simple_vpc" {
-  source = "https://github.com/padok-team/terraform-aws-network"
+  source = "git@github.com:padok-team/terraform-aws-network.git"
 
   vpc_name = "Simple_VPC"
   tags = {
