@@ -20,6 +20,18 @@ variable "map_public_ip_on_launch" {
   default     = false
 }
 
+variable "enable_nat_gateway" {
+  type        = bool
+  description = "Should be true if you want to provision NAT Gateways for each of your private networks	"
+  default     = true
+}
+
+variable "single_nat_gateway" {
+  type        = bool
+  description = "Should be true if you want to provision a single shared NAT Gateway across all of your private networks. Set to false for production environment"
+  default     = true
+}
+
 # Global tags
 variable "tags" {
   type        = map(string)
