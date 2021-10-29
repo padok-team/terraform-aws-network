@@ -19,7 +19,7 @@ module "simple_vpc" {
     "Scope"      = "Global Tag",
     "Terraform"  = "True",
     "ModuleName" = "simple_vpc",
-    "Example"    = "vpc_1_az_3_subnets"
+    "Example"    = "vpc_1_az_2_subnets"
   }
 
   public_subnet_tags = {
