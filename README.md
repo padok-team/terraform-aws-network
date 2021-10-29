@@ -6,6 +6,7 @@ Terraform module which creates **VPC** resources on **AWS**. This module is an a
 
 - AAVPC I can spawn on one or multiple AZ
 - AAOps I can deploy 3 types of subnets in my VPC
+- AAOps I can retrieve subnets & vpc ids as outputs of the module
 
 ## Usage
 
