@@ -21,6 +21,6 @@ output "intra_subnets_ids" {
 }
 
 output "nat_gateway_ips" {
-  description = "List of Nat Gateway External IP"
+  description = "List of Nat Gateway External IPs"
   value       = module.vpc.nat_public_ips
 }
