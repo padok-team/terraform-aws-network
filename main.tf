@@ -1,4 +1,4 @@
-module "vpc" {
+module "this" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "3.10.0"
 
