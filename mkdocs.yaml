@@ -1,8 +1,5 @@
 ---
 site_name: terraform-aws-network
-site_description: >
-  Terraform module which creates VPC resources on AWS. This module is an
-  abstraction of the official AWS VPC Terraform module.
 
 repo_name: padok-team/terraform-aws-network
 repo_url: https://github.com/padok-team/terraform-aws-network
