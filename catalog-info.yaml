@@ -2,7 +2,9 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: terraform-aws-network
-  description: Terraform module which creates VPC resources on AWS. This module is an abstraction of the [AWS VPC Terraform](https://github.com/terraform-aws-modules/terraform-aws-vpc).
+  description: >
+    Terraform module which creates VPC resources on AWS. This module is an
+    abstraction of the official AWS VPC Terraform module.
   tags:
     - "terraform"
     - "aws"
