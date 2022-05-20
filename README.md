@@ -12,7 +12,7 @@ Terraform module which creates **VPC** resources on **AWS**. This module is an a
 
 ## Schema
 
-![Schema](img/schema.png)
+![Schema](docs/assets/schema.png)
 
 ## Usage
 
