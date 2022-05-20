@@ -6,7 +6,3 @@ repo_url: https://github.com/padok-team/terraform-aws-network
 
 plugins:
   - techdocs-core
-
-markdown_extensions:
-  - pymdownx.highlight
-  - admonition
