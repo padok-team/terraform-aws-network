@@ -24,3 +24,8 @@ output "nat_gateway_ips" {
   description = "List of Nat Gateway External IPs"
   value       = module.this.nat_public_ips
 }
+
+output "this" {
+  description = "All ouputs from the module"
+  value       = module.this
+}
