@@ -32,6 +32,12 @@ variable "single_nat_gateway" {
   default     = true
 }
 
+variable "one_nat_gateway_per_az" {
+  description = "Should be true if you want to provision a single NAT Gateway per AZ across all of your private networks."
+  type        = bool
+  default     = true
+}
+
 variable "create_igw" {
   description = "Controls if an Internet Gateway is created for public subnets and the related routes that connect them."
   type        = bool
